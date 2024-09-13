@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #ffc017;
+  padding: 20px 50px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+}
+
+/* Quando la navbar diventa bianca */
+header.scrolled {
+  background-color: white; /* Cambia il colore della navbar a bianco */
+  padding: 10px 20px;
+}
+
+/* Il pulsante diventa verde quando la navbar scorre */
+header.scrolled nav ul li a.button {
+  background-color: #1a8917; /* Verde */
+}
+.logo img {
+  height: 25px;
+  padding-left: 3.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  cursor: pointer; /* Cambia il cursore su hover */
+}
+
+nav ul li a:hover {
+  color: #333; /* Cambia il colore al passaggio del mouse */
+}
+
+nav ul li a.button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a.button:hover {
+  background-color: #333; /* Colore leggermente più scuro al passaggio */
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+/* Hero Section */
+.hero {
+  background-color: #ffc017;
+  height: 600px;
+  padding-top: 80px; /* Spazio per la navbar */
+  background-image: url("../imgs/svg/M-images.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.hero-content {
+  max-width: 1200px;
+  text-align: left;
+  margin-left: 6rem; /* Sposta il contenuto verso destra */
+  margin-inline: auto;
+  margin-top: 100px;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  font-family: "Spectral", serif;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.hero-content button {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #333;
+}
+.hero-image {
+  flex: 1;
+  background-size: contain;
+  height: 100%;
+}
+
+/* Sezione Trending */
+.trending {
+  padding-inline: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: white;
+  border-bottom: 3px solid #e0e0e0;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.trending h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.trending-icon {
+  width: 20px; /* Dimensione dell'icona Trending */
+  margin-right: 10px;
+}
+.trending-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.trending-item .number {
+  font-size: 32px;
+  color: #999;
+  margin-right: 10px;
+}
+
+.trending-item .content {
+  text-align: left;
+}
+
+.trending-item .content h3 {
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.author-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover; /* Fa sì che l'immagine si adatti senza distorsioni */
+  margin-right: 8px;
+}
+.author-icons {
+  width: 24px;
+  height: 24px;
+  border-radius: 5%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+.author-photo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle; /* Allinea verticalmente con il testo */
+}
+.author-paul {
+  width: 24px;
+  height: 24px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.trending-item .content h4 {
+  font-size: 18px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-inline: 5rem;
+  padding-top: 1rem;
+  max-width: 1200px; /* Limita la larghezza totale per centrare */
+  margin: 0 auto; /* Centra l'intera sezione */
+}
+/* Sezione Articoli */
+.latest-articles {
+  flex: 3; /* Gli articoli occuperanno circa il 75% dello spazio */
+  margin-right: 20px; /* Spazio tra articoli e sezione discover */
+  max-width: 700px;
+}
+.discover-more {
+  flex: 1; /* La sezione discover occupa il 25% dello spazio */
+  max-width: 300px; /* Larghezza massima per evitare che si allarghi troppo */
+}
+.latest-articles,
+.discover-more {
+  padding: 20px;
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article-item {
+  display: flex;
+  flex-direction: row-reverse; /* Mantieni immagini a destra, testo a sinistra */
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0; /* Separatore sotto ogni articolo */
+}
+
+.article-item img.article-img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+.bookmark-icon {
+  width: 30px; /* Dimensione ridotta del bookmark */
+  height: auto;
+  margin-right: 10px; /* Spazio tra il bookmark e l'immagine dell'articolo */
+}
+
+.article-content {
+  flex: 1;
+  text-align: left;
+  max-width: 400px;
+}
+
+.article-content h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.article-content h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.article-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.article-content .meta {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+aside {
+  flex: 1;
+  max-width: 300px;
+  padding-left: 20px; /* Aggiunge un po' di spazio a sinistra */
+}
+aside h3 {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+aside ul li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  background-color: #f4f4f4;
+  font-size: 10px;
+  color: #333;
+}
+aside .navigaton-bar {
+  border-bottom: 1px solid #f2f3f3;
+  display: flex;
+  flex-wrap: wrap;
+}
+aside .navigaton-bar {
+  border: 1px solid #f2f3f3;
+  border-radius: 4px;
+}
+aside .contacts {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/* Responsive da 577px a 1199px */
+@media (min-width: 577px) and (max-width: 1199px) {
+  /* Adattamento per la navbar */
+  header {
+    padding: 10px 20px;
+  }
+
+  .hero-content {
+    margin-left: 4rem;
+    margin-right: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  /* Trending List su due colonne */
+  .trending-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .trending-item {
+    width: 48%;
+  }
+
+  /* Main content e discover sezione affiancate */
+  .main-content {
+    flex-direction: column-reverse;
+    padding: 0 2rem; /* Riduci il padding sui lati */
+  }
+
+  .latest-articles {
+    margin-right: 0;
+    max-width: 100%; /* Utilizza tutta la larghezza */
+  }
+
+  .discover-more {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  /* Article list adattato */
+  .article-item {
+    flex-direction: column; /* Disposizione verticale */
+  }
+
+  .article-img {
+    width: 100%;
+    height: auto; /* L'immagine si adatta alla larghezza del contenitore */
+    margin-left: 0;
+  }
+}
