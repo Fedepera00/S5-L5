@@ -123,11 +123,6 @@ nav ul li a.button:hover {
 .hero-content button:hover {
   background-color: #333;
 }
-.hero-image {
-  flex: 1;
-  background-size: contain;
-  height: 100%;
-}
 
 /* Sezione Trending */
 .trending {
@@ -218,7 +213,7 @@ nav ul li a.button:hover {
 .main-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+
   padding-inline: 5rem;
   padding-top: 1rem;
   max-width: 1200px; /* Limita la larghezza totale per centrare */
@@ -369,6 +364,7 @@ aside .contacts {
   .main-content {
     flex-direction: column-reverse;
     padding: 0 2rem; /* Riduci il padding sui lati */
+    align-items: center;
   }
 
   .latest-articles {
@@ -383,7 +379,7 @@ aside .contacts {
 
   /* Article list adattato */
   .article-item {
-    flex-direction: column; /* Disposizione verticale */
+    flex-direction: row-reverse; /* Disposizione verticale */
   }
 
   .article-img {
